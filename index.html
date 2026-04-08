@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetCare — Mockup UI</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- ENCABEZADO -->
+    <header class="page-header">
+      <div class="header-logo">🐾 <span>PetCare</span></div>
+      <div class="header-info">
+        <p class="header-title">Mockup de Interfaz — Asistente Digital para el Cuidado Animal</p>
+        <p class="header-sub">Grupo HPMB01-G11 · Wilinton Castaño Cifuentes · Politécnico Grancolombiano</p>
+      </div>
+    </header>
+
+    <!-- NAVEGACIÓN DE PANTALLAS (Simulador de estados) -->
+    <nav class="screen-nav">
+      <button class="nav-btn active" data-screen="perfil">👤 Perfil</button>
+      <button class="nav-btn" data-screen="fotos">🐕 Galería</button>
+      <button class="nav-btn" data-screen="video">🎬 Tutoriales</button>
+      <button class="nav-btn" data-screen="web">🏥 Clínicas</button>
+      <button class="nav-btn" data-screen="botones">🆘 Emergencia</button>
+      <button class="nav-btn" data-screen="inicio">🏠 Inicio</button>
+    </nav>
+
+    <!-- ÁREA DE PREVIEW -->
+    <section class="preview-area">
+
+      <!-- TELÉFONO -->
+      <div class="phone">
+        <div class="status-bar">
+          <span>10:30</span>
+          <span>⚡ 📶 ■</span>
+        </div>
+        <div class="top-bar">
+          <span class="app-logo">Pet<span class="logo-accent">Care</span></span>
+        </div>
+        <div class="main-area">
+
+          <!-- FRAGMENTO IZQUIERDO: MENÚ (Master) -->
+          <div class="left-frag" id="menuFragment">
+            <button class="menu-btn" data-target="perfil">
+              <span class="menu-icon">👤</span>
+              <span class="menu-label">Perfil</span>
+            </button>
+            <button class="menu-btn" data-target="fotos">
+              <span class="menu-icon">🐕</span>
+              <span class="menu-label">Galería</span>
+            </button>
+            <button class="menu-btn" data-target="video">
+              <span class="menu-icon">🎬</span>
+              <span class="menu-label">Video</span>
+            </button>
+            <button class="menu-btn" data-target="web">
+              <span class="menu-icon">🏥</span>
+              <span class="menu-label">Web</span>
+            </button>
+            <button class="menu-btn" data-target="botones">
+              <span class="menu-icon">🆘</span>
+              <span class="menu-label">Acción</span>
+            </button>
+          </div>
+
+          <!-- FRAGMENTO DERECHO: CONTENIDO (Detail) -->
+          <div class="right-frag">
+
+            <!-- INICIO -->
+            <div class="content-section active" id="section-inicio">
+              <div class="empty-state">
+                <div class="empty-icon">🐾</div>
+                <div class="empty-title">¡Bienvenido a PetCare!</div>
+                <div class="empty-sub">Gestiona el bienestar de tus compañeros peludos desde aquí.</div>
+              </div>
+            </div>
+
+            <!-- PERFIL (RF02) -->
+            <div class="content-section" id="section-perfil">
+              <div class="section-header">Perfil del Cuidador</div>
+              <div class="profile-photo">WC</div>
+              <div class="profile-name">Wilinton Castaño C.</div>
+              <div class="profile-role">Especialista en Cuidado Animal</div>
+              <div class="info-block">
+                <div class="info-label">Especialidad</div>
+                <div class="info-text">Entrenamiento canino y nutrición avanzada.</div>
+              </div>
+              <div class="info-block">
+                <div class="info-label">Experiencia</div>
+                <div class="info-text">Más de 5 años gestionando refugios y clínicas veterinarias.</div>
+              </div>
+              <div class="info-block">
+                <div class="info-label">Ubicación</div>
+                <div class="info-text">Bogotá, Colombia · Politécnico Grancolombiano</div>
+              </div>
+            </div>
+
+            <!-- GALERÍA (RF03) -->
+            <div class="content-section" id="section-fotos">
+              <div class="section-header">Razas y Especies</div>
+              <div class="photo-list" id="photoList">
+                <div class="photo-item" data-desc="El Golden Retriever es amigable, inteligente y devoto. Ideal para familias y asistencia médica.">
+                  <div class="photo-thumb">🐕</div>
+                  <div class="photo-info">
+                    <div class="photo-title">Golden Retriever</div>
+                    <div class="photo-sub">Perro · Tamaño Grande</div>
+                  </div>
+                </div>
+                <div class="photo-item" data-desc="El Gato Siamés es conocido por su naturaleza social y sus distintivos ojos azules.">
+                  <div class="photo-thumb">🐈</div>
+                  <div class="photo-info">
+                    <div class="photo-title">Gato Siamés</div>
+                    <div class="photo-sub">Felino · Muy vocal</div>
+                  </div>
+                </div>
+                <div class="photo-item" data-desc="El Conejo Cabeza de León requiere cuidados especiales en su pelaje y dieta rica en fibra.">
+                  <div class="photo-thumb">🐰</div>
+                  <div class="photo-info">
+                    <div class="photo-title">Cabeza de León</div>
+                    <div class="photo-sub">Pequeño · Mascota exótica</div>
+                  </div>
+                </div>
+              </div>
+              <div class="photo-desc-box" id="photoDescBox" style="display:none;">
+                <div class="desc-close" id="descClose">✕</div>
+                <div class="desc-text" id="photoDescText"></div>
+              </div>
+            </div>
+
+            <!-- VIDEO (RF04) -->
+            <div class="content-section" id="section-video">
+              <div class="section-header">Tutoriales de Salud</div>
+              <div class="video-player" id="videoPlayer">
+                <div class="video-overlay"></div>
+                <button class="play-btn" id="playBtn">▶</button>
+              </div>
+              <div class="video-controls">
+                <button class="ctrl-btn" id="playPauseBtn">▶</button>
+                <div class="progress-bar">
+                  <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="time-label" id="timeLabel">0:00 / 2:15</span>
+              </div>
+              <div class="video-meta">
+                <div class="video-title">Primeros Auxilios: RCP en Perros</div>
+                <div class="video-desc">Aprende qué hacer en caso de emergencia respiratoria con tu mascota.</div>
+              </div>
+            </div>
+
+            <!-- WEB (RF05) -->
+            <div class="content-section" id="section-web">
+              <div class="section-header">Buscador Veterinario</div>
+              <div class="url-bar">
+                <input class="url-input" id="urlInput" type="text" placeholder="https://clinica-veterinaria.com" />
+                <button class="go-btn" id="goBtn">IR</button>
+              </div>
+              <div class="webview-frame">
+                <div class="webview-topbar">
+                  <div class="wb-dot red"></div><div class="wb-dot yellow"></div><div class="wb-dot green"></div>
+                  <span class="wb-url" id="wbUrlDisplay">saludanimal.org</span>
+                </div>
+                <div class="webview-content" id="webviewContent">
+                  <div class="web-placeholder">
+                    <div class="web-placeholder-icon">🌐</div>
+                    <div class="web-placeholder-text">Ingresa una URL para buscar clínicas</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BOTONES (RF06) -->
+            <div class="content-section" id="section-botones">
+              <div class="section-header">Acciones Rápidas</div>
+              <button class="news-btn action-btn-alt" data-msg="Abriendo formulario de Cita Médica...">
+                <div class="btn-tag">📅 Agenda</div>
+                <div class="btn-title">Agendar Cita Veterinaria</div>
+                <div class="btn-time">Disponible de Lunes a Sábado</div>
+              </button>
+              <button class="news-btn action-btn-emerg" data-msg="Iniciando llamada de emergencia al 01-800-PETS...">
+                <div class="btn-tag">🚨 Urgente</div>
+                <div class="btn-title">Llamar a Emergencias</div>
+                <div class="btn-time">Atención 24/7</div>
+              </button>
+              <button class="news-btn" data-msg="Localizando farmacias cercanas...">
+                <div class="btn-tag">💊 Medicinas</div>
+                <div class="btn-title">Farmacias de Turno</div>
+                <div class="btn-time">Cerca de tu ubicación</div>
+              </button>
+              <div class="toast" id="toast"></div>
+            </div>
+
+          </div><!-- /right-frag -->
+        </div><!-- /main-area -->
+      </div><!-- /phone -->
+
+      <!-- PANEL DE ARQUITECTURA -->
+      <aside class="info-panel">
+        <h3 class="info-panel-title">Arquitectura PetCare</h3>
+        <div class="arch-item">
+          <span class="arch-icon">🏗️</span>
+          <div>
+            <strong>Patrón Master-Detail</strong>
+            <p>Implementado mediante Fragments dinámicos sobre un MainActivity con soporte de Kotlin.</p>
+          </div>
+        </div>
+        <div class="arch-item">
+          <span class="arch-icon">🎞️</span>
+          <div>
+            <strong>Multimedia</strong>
+            <p>Integración de VideoView y MediaController para los tutoriales de primeros auxilios.</p>
+          </div>
+        </div>
+        <div class="arch-item">
+          <span class="arch-icon">🕸️</span>
+          <div>
+            <strong>Visor Externo</strong>
+            <p>Uso de componente WebView con permisos de INTERNET habilitados en el Manifest.</p>
+          </div>
+        </div>
+        <div class="screen-label-box">
+          <p class="screen-label-title">Fragmento Activo</p>
+          <p class="screen-label-value" id="activeScreenLabel">Inicio</p>
+        </div>
+      </aside>
+
+    </section>
+
+    <footer class="page-footer">
+      <p>PetCare · Wilinton Castaño Cifuentes · Herramientas de Programación Móvil I · 2026</p>
+    </footer>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
