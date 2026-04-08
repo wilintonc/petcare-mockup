@@ -10,7 +10,6 @@
 
   <div class="page">
 
-    <!-- ENCABEZADO -->
     <header class="page-header">
       <div class="header-logo">🐾 <span>PetCare</span></div>
       <div class="header-info">
@@ -19,7 +18,6 @@
       </div>
     </header>
 
-    <!-- NAVEGACIÓN DE PANTALLAS (Simulador de estados) -->
     <nav class="screen-nav">
       <button class="nav-btn active" data-screen="perfil">👤 Perfil</button>
       <button class="nav-btn" data-screen="fotos">🐕 Galería</button>
@@ -29,10 +27,8 @@
       <button class="nav-btn" data-screen="inicio">🏠 Inicio</button>
     </nav>
 
-    <!-- ÁREA DE PREVIEW -->
     <section class="preview-area">
 
-      <!-- TELÉFONO -->
       <div class="phone">
         <div class="status-bar">
           <span>10:30</span>
@@ -43,7 +39,6 @@
         </div>
         <div class="main-area">
 
-          <!-- FRAGMENTO IZQUIERDO: MENÚ (Master) -->
           <div class="left-frag" id="menuFragment">
             <button class="menu-btn" data-target="perfil">
               <span class="menu-icon">👤</span>
@@ -67,19 +62,17 @@
             </button>
           </div>
 
-          <!-- FRAGMENTO DERECHO: CONTENIDO (Detail) -->
           <div class="right-frag">
 
-            <!-- INICIO -->
             <div class="content-section active" id="section-inicio">
               <div class="empty-state">
                 <div class="empty-icon">🐾</div>
+                <br>
                 <div class="empty-title">¡Bienvenido a PetCare!</div>
                 <div class="empty-sub">Gestiona el bienestar de tus compañeros peludos desde aquí.</div>
               </div>
             </div>
 
-            <!-- PERFIL (RF02) -->
             <div class="content-section" id="section-perfil">
               <div class="section-header">Perfil del Cuidador</div>
               <div class="profile-photo">WC</div>
@@ -99,7 +92,6 @@
               </div>
             </div>
 
-            <!-- GALERÍA (RF03) -->
             <div class="content-section" id="section-fotos">
               <div class="section-header">Razas y Especies</div>
               <div class="photo-list" id="photoList">
@@ -131,7 +123,6 @@
               </div>
             </div>
 
-            <!-- VIDEO (RF04) -->
             <div class="content-section" id="section-video">
               <div class="section-header">Tutoriales de Salud</div>
               <div class="video-player" id="videoPlayer">
@@ -151,7 +142,6 @@
               </div>
             </div>
 
-            <!-- WEB (RF05) -->
             <div class="content-section" id="section-web">
               <div class="section-header">Buscador Veterinario</div>
               <div class="url-bar">
@@ -172,7 +162,6 @@
               </div>
             </div>
 
-            <!-- BOTONES (RF06) -->
             <div class="content-section" id="section-botones">
               <div class="section-header">Acciones Rápidas</div>
               <button class="news-btn action-btn-alt" data-msg="Abriendo formulario de Cita Médica...">
@@ -193,11 +182,10 @@
               <div class="toast" id="toast"></div>
             </div>
 
-          </div><!-- /right-frag -->
-        </div><!-- /main-area -->
-      </div><!-- /phone -->
+          </div>
+        </div>
+      </div>
 
-      <!-- PANEL DE ARQUITECTURA -->
       <aside class="info-panel">
         <h3 class="info-panel-title">Arquitectura PetCare</h3>
         <div class="arch-item">
