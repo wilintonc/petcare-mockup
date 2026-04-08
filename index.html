@@ -4,225 +4,186 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PetCare — Mockup UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <div class="page">
+<div class="page-container">
+  <header>
+    <div class="logo-main">🐾 Pet<span>Care</span></div>
+    <p class="header-subtext">Mockup de Interfaz — Asistente Digital para el Cuidado Animal</p>
+    <p style="font-size: 11px; color: #bbb;">Wilinton Castaño Cifuentes · Politécnico Grancolombiano</p>
+  </header>
 
-    <header class="page-header">
-      <div class="header-logo">🐾 <span>PetCare</span></div>
-      <div class="header-info">
-        <p class="header-title">Mockup de Interfaz — Asistente Digital para el Cuidado Animal</p>
-        <p class="header-sub">Grupo HPMB01-G11 · Wilinton Castaño Cifuentes · Politécnico Grancolombiano</p>
+  <nav class="external-nav">
+    <button class="nav-btn active" data-screen="inicio">Inicio</button>
+    <button class="nav-btn" data-screen="perfil">Perfil</button>
+    <button class="nav-btn" data-screen="fotos">Galería</button>
+    <button class="nav-btn" data-screen="video">Tutoriales</button>
+    <button class="nav-btn" data-screen="web">Clínicas</button>
+    <button class="nav-btn" data-screen="botones">Emergencia</button>
+  </nav>
+
+  <main class="main-view">
+    
+    <!-- TELÉFONO -->
+    <div class="phone-frame">
+      <div class="status-bar">
+        <span>10:30</span>
+        <span>📶 🔋</span>
       </div>
-    </header>
+      <div class="screen">
+        <div class="app-header">PetCare</div>
+        <div class="app-body">
+          
+          <aside class="app-sidebar">
+            <button class="sidebar-btn active" data-target="inicio">
+              <span class="sidebar-icon">🏠</span>
+              <span class="sidebar-label">Inicio</span>
+            </button>
+            <button class="sidebar-btn" data-target="perfil">
+              <span class="sidebar-icon">👤</span>
+              <span class="sidebar-label">Perfil</span>
+            </button>
+            <button class="sidebar-btn" data-target="fotos">
+              <span class="sidebar-icon">🐕</span>
+              <span class="sidebar-label">Razas</span>
+            </button>
+            <button class="sidebar-btn" data-target="web">
+              <span class="sidebar-icon">🏥</span>
+              <span class="sidebar-label">Web</span>
+            </button>
+            <button class="sidebar-btn" data-target="botones">
+              <span class="sidebar-icon">🆘</span>
+              <span class="sidebar-label">S.O.S</span>
+            </button>
+          </aside>
 
-    <nav class="screen-nav">
-      <button class="nav-btn active" data-screen="perfil">👤 Perfil</button>
-      <button class="nav-btn" data-screen="fotos">🐕 Galería</button>
-      <button class="nav-btn" data-screen="video">🎬 Tutoriales</button>
-      <button class="nav-btn" data-screen="web">🏥 Clínicas</button>
-      <button class="nav-btn" data-screen="botones">🆘 Emergencia</button>
-      <button class="nav-btn" data-screen="inicio">🏠 Inicio</button>
-    </nav>
+          <main class="app-content">
+            
+            <section id="s-inicio" class="section active">
+              <div class="welcome-card">
+                <div class="welcome-icon">🐾</div>
+                <h3>¡Hola!</h3>
+                <p class="welcome-text">Bienvenido al asistente de cuidado animal. Gestiona la salud de tus mascotas fácilmente.</p>
+              </div>
+            </section>
 
-    <section class="preview-area">
+            <section id="s-perfil" class="section">
+              <div class="section-title">Perfil del Cuidador</div>
+              <div class="profile-img">WC</div>
+              <div class="profile-info">
+                <h4>Wilinton Castaño C.</h4>
+                <p>Especialista en Nutrición</p>
+              </div>
+              <div class="info-card">
+                <label>Experiencia</label>
+                <span>5+ años en medicina preventiva.</span>
+              </div>
+              <div class="info-card">
+                <label>Ubicación</label>
+                <span>Bogotá, Colombia.</span>
+              </div>
+            </section>
 
-      <div class="phone">
-        <div class="status-bar">
-          <span>10:30</span>
-          <span>⚡ 📶 ■</span>
+            <section id="s-fotos" class="section">
+              <div class="section-title">Galería de Razas</div>
+              <div class="species-item" data-info="El Golden Retriever es amigable, inteligente y devoto.">
+                <div class="species-icon">🐕</div>
+                <div class="species-name">Golden Retriever</div>
+              </div>
+              <div class="species-item" data-info="El Gato Siamés es social y muy vocal.">
+                <div class="species-icon">🐈</div>
+                <div class="species-name">Gato Siamés</div>
+              </div>
+              <div class="species-item" data-info="El Conejo Cabeza de León requiere cuidados especiales en su pelaje.">
+                <div class="species-icon">🐰</div>
+                <div class="species-name">Conejo León</div>
+              </div>
+              <div id="descBox" class="desc-box"></div>
+            </section>
+
+            <section id="s-video" class="section">
+              <div class="section-title">Tutoriales RCP</div>
+              <div class="video-box" id="vidPlay">▶</div>
+              <div class="video-progress"><div class="video-bar" id="vBar"></div></div>
+              <p style="font-size: 9px; color: #666;">Primeros auxilios básicos para asfixia en perros y gatos.</p>
+            </section>
+
+            <section id="s-web" class="section">
+              <div class="section-title">Buscador Clínico</div>
+              <div class="web-input-area">
+                <input type="text" class="web-input" id="webIn" placeholder="Buscar clínica...">
+                <button class="web-go" id="webGo">GO</button>
+              </div>
+              <div class="web-frame" id="webFrame">🌐</div>
+            </section>
+
+            <section id="s-botones" class="section">
+              <div class="section-title">Acciones Rápidas</div>
+              <div class="action-row t-msg" data-msg="Llamando a Emergencias Veterinarias...">
+                <h5>🚨 Llamar Emergencia</h5>
+                <p>Atención inmediata 24/7</p>
+              </div>
+              <div class="action-row t-msg" data-msg="Agendando cita para la próxima semana...">
+                <h5>📅 Agendar Cita</h5>
+                <p>Consulta general y vacunas</p>
+              </div>
+              <div class="action-row emerg t-msg" data-msg="Enviando ubicación a clínica cercana...">
+                <h5>📍 Compartir Ubicación</h5>
+                <p>Solo en caso de riesgo</p>
+              </div>
+            </section>
+
+            <div class="toast" id="toast">Mensaje enviado</div>
+
+          </main>
         </div>
-        <div class="top-bar">
-          <span class="app-logo">Pet<span class="logo-accent">Care</span></span>
-        </div>
-        <div class="main-area">
+      </div>
+    </div>
 
-          <div class="left-frag" id="menuFragment">
-            <button class="menu-btn" data-target="perfil">
-              <span class="menu-icon">👤</span>
-              <span class="menu-label">Perfil</span>
-            </button>
-            <button class="menu-btn" data-target="fotos">
-              <span class="menu-icon">🐕</span>
-              <span class="menu-label">Galería</span>
-            </button>
-            <button class="menu-btn" data-target="video">
-              <span class="menu-icon">🎬</span>
-              <span class="menu-label">Video</span>
-            </button>
-            <button class="menu-btn" data-target="web">
-              <span class="menu-icon">🏥</span>
-              <span class="menu-label">Web</span>
-            </button>
-            <button class="menu-btn" data-target="botones">
-              <span class="menu-icon">🆘</span>
-              <span class="menu-label">Acción</span>
-            </button>
-          </div>
-
-          <div class="right-frag">
-
-            <div class="content-section active" id="section-inicio">
-              <div class="empty-state">
-                <div class="empty-icon">🐾</div>
-                <br>
-                <div class="empty-title">¡Bienvenido a PetCare!</div>
-                <div class="empty-sub">Gestiona el bienestar de tus compañeros peludos desde aquí.</div>
-              </div>
-            </div>
-
-            <div class="content-section" id="section-perfil">
-              <div class="section-header">Perfil del Cuidador</div>
-              <div class="profile-photo">WC</div>
-              <div class="profile-name">Wilinton Castaño C.</div>
-              <div class="profile-role">Especialista en Cuidado Animal</div>
-              <div class="info-block">
-                <div class="info-label">Especialidad</div>
-                <div class="info-text">Entrenamiento canino y nutrición avanzada.</div>
-              </div>
-              <div class="info-block">
-                <div class="info-label">Experiencia</div>
-                <div class="info-text">Más de 5 años gestionando refugios y clínicas veterinarias.</div>
-              </div>
-              <div class="info-block">
-                <div class="info-label">Ubicación</div>
-                <div class="info-text">Bogotá, Colombia · Politécnico Grancolombiano</div>
-              </div>
-            </div>
-
-            <div class="content-section" id="section-fotos">
-              <div class="section-header">Razas y Especies</div>
-              <div class="photo-list" id="photoList">
-                <div class="photo-item" data-desc="El Golden Retriever es amigable, inteligente y devoto. Ideal para familias y asistencia médica.">
-                  <div class="photo-thumb">🐕</div>
-                  <div class="photo-info">
-                    <div class="photo-title">Golden Retriever</div>
-                    <div class="photo-sub">Perro · Tamaño Grande</div>
-                  </div>
-                </div>
-                <div class="photo-item" data-desc="El Gato Siamés es conocido por su naturaleza social y sus distintivos ojos azules.">
-                  <div class="photo-thumb">🐈</div>
-                  <div class="photo-info">
-                    <div class="photo-title">Gato Siamés</div>
-                    <div class="photo-sub">Felino · Muy vocal</div>
-                  </div>
-                </div>
-                <div class="photo-item" data-desc="El Conejo Cabeza de León requiere cuidados especiales en su pelaje y dieta rica en fibra.">
-                  <div class="photo-thumb">🐰</div>
-                  <div class="photo-info">
-                    <div class="photo-title">Cabeza de León</div>
-                    <div class="photo-sub">Pequeño · Mascota exótica</div>
-                  </div>
-                </div>
-              </div>
-              <div class="photo-desc-box" id="photoDescBox" style="display:none;">
-                <div class="desc-close" id="descClose">✕</div>
-                <div class="desc-text" id="photoDescText"></div>
-              </div>
-            </div>
-
-            <div class="content-section" id="section-video">
-              <div class="section-header">Tutoriales de Salud</div>
-              <div class="video-player" id="videoPlayer">
-                <div class="video-overlay"></div>
-                <button class="play-btn" id="playBtn">▶</button>
-              </div>
-              <div class="video-controls">
-                <button class="ctrl-btn" id="playPauseBtn">▶</button>
-                <div class="progress-bar">
-                  <div class="progress-fill" id="progressFill"></div>
-                </div>
-                <span class="time-label" id="timeLabel">0:00 / 2:15</span>
-              </div>
-              <div class="video-meta">
-                <div class="video-title">Primeros Auxilios: RCP en Perros</div>
-                <div class="video-desc">Aprende qué hacer en caso de emergencia respiratoria con tu mascota.</div>
-              </div>
-            </div>
-
-            <div class="content-section" id="section-web">
-              <div class="section-header">Buscador Veterinario</div>
-              <div class="url-bar">
-                <input class="url-input" id="urlInput" type="text" placeholder="https://clinica-veterinaria.com" />
-                <button class="go-btn" id="goBtn">IR</button>
-              </div>
-              <div class="webview-frame">
-                <div class="webview-topbar">
-                  <div class="wb-dot red"></div><div class="wb-dot yellow"></div><div class="wb-dot green"></div>
-                  <span class="wb-url" id="wbUrlDisplay">saludanimal.org</span>
-                </div>
-                <div class="webview-content" id="webviewContent">
-                  <div class="web-placeholder">
-                    <div class="web-placeholder-icon">🌐</div>
-                    <div class="web-placeholder-text">Ingresa una URL para buscar clínicas</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="content-section" id="section-botones">
-              <div class="section-header">Acciones Rápidas</div>
-              <button class="news-btn action-btn-alt" data-msg="Abriendo formulario de Cita Médica...">
-                <div class="btn-tag">📅 Agenda</div>
-                <div class="btn-title">Agendar Cita Veterinaria</div>
-                <div class="btn-time">Disponible de Lunes a Sábado</div>
-              </button>
-              <button class="news-btn action-btn-emerg" data-msg="Iniciando llamada de emergencia al 01-800-PETS...">
-                <div class="btn-tag">🚨 Urgente</div>
-                <div class="btn-title">Llamar a Emergencias</div>
-                <div class="btn-time">Atención 24/7</div>
-              </button>
-              <button class="news-btn" data-msg="Localizando farmacias cercanas...">
-                <div class="btn-tag">💊 Medicinas</div>
-                <div class="btn-title">Farmacias de Turno</div>
-                <div class="btn-time">Cerca de tu ubicación</div>
-              </button>
-              <div class="toast" id="toast"></div>
-            </div>
-
-          </div>
+    <!-- PANEL INFO -->
+    <aside class="arch-side">
+      <h3 class="arch-title" style="margin-bottom: 20px; color: var(--secondary);">Arquitectura PetCare</h3>
+      
+      <div class="arch-item">
+        <div class="arch-icon">🏗️</div>
+        <div class="arch-text">
+          <h4>Master-Detail</h4>
+          <p>Uso de Fragments dinámicos gestionados por el controlador principal en Kotlin.</p>
         </div>
       </div>
 
-      <aside class="info-panel">
-        <h3 class="info-panel-title">Arquitectura PetCare</h3>
-        <div class="arch-item">
-          <span class="arch-icon">🏗️</span>
-          <div>
-            <strong>Patrón Master-Detail</strong>
-            <p>Implementado mediante Fragments dinámicos sobre un MainActivity con soporte de Kotlin.</p>
-          </div>
+      <div class="arch-item">
+        <div class="arch-icon">🎞️</div>
+        <div class="arch-text">
+          <h4>Multimedia</h4>
+          <p>Integración de MediaController para la reproducción de guías de salud.</p>
         </div>
-        <div class="arch-item">
-          <span class="arch-icon">🎞️</span>
-          <div>
-            <strong>Multimedia</strong>
-            <p>Integración de VideoView y MediaController para los tutoriales de primeros auxilios.</p>
-          </div>
+      </div>
+
+      <div class="arch-item">
+        <div class="arch-icon">🌐</div>
+        <div class="arch-text">
+          <h4>WebView</h4>
+          <p>Visor de red externo con permisos de Internet habilitados en el AndroidManifest.</p>
         </div>
-        <div class="arch-item">
-          <span class="arch-icon">🕸️</span>
-          <div>
-            <strong>Visor Externo</strong>
-            <p>Uso de componente WebView con permisos de INTERNET habilitados en el Manifest.</p>
-          </div>
-        </div>
-        <div class="screen-label-box">
-          <p class="screen-label-title">Fragmento Activo</p>
-          <p class="screen-label-value" id="activeScreenLabel">Inicio</p>
-        </div>
-      </aside>
+      </div>
 
-    </section>
+      <div style="background: #fdf2e9; padding: 20px; border-radius: 15px; border: 1px dashed var(--primary); text-align: center;">
+        <p style="font-size: 11px; color: #aaa; text-transform: uppercase;">Estado del Fragmento</p>
+        <h2 id="activeLabel" style="color: var(--secondary);">Inicio</h2>
+      </div>
+    </aside>
 
-    <footer class="page-footer">
-      <p>PetCare · Wilinton Castaño Cifuentes · Herramientas de Programación Móvil I · 2026</p>
-    </footer>
+  </main>
 
-  </div>
+  <footer>
+    PetCare App Mockup · Herramientas de Programación Móvil I · 2026
+  </footer>
+</div>
 
-  <script src="js/app.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
